@@ -3,10 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Вывод и фильтрация</title>
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="//net.localhost/jquery-ui.css">
 	<link rel="stylesheet" href="http://boge.localhost/search/modules/range.css">
 
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="http://net.localhost/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 
@@ -47,39 +47,6 @@
 		</p>
 
 		<p>
-
-			<script>
-				$( function() {
-					$( "#slider-range-power" ).slider({
-						range: true,
-						min: 0.65,
-						max: 355,
-						step: 0.01,
-						values: [ 110, 250 ],
-						slide: function( event, ui ) {
-							$( "#amount-power-st" ).val( ui.values[ 0 ].toFixed(2) );
-							$( "#amount-power-en" ).val( ui.values[ 1 ].toFixed(2) );
-						}
-					});
-					$( "#amount-power-st" ).val( $( "#slider-range-power" ).slider( "values", 0 ).toFixed(2) );
-					$( "#amount-power-en" ).val( $( "#slider-range-power" ).slider( "values", 1 ).toFixed(2) );
-
-					$( "#slider-range-performance" ).slider({
-						range: true,
-						min: 0.08,
-						max: 50.30,
-						step: 0.01,
-						values: [ 15, 35 ],
-						slide: function( event, ui ) {
-							$( "#amount-performance-st" ).val( ui.values[ 0 ].toFixed(2) );
-							$( "#amount-performance-en" ).val( ui.values[ 1 ].toFixed(2) );
-						}
-					});
-					$( "#amount-performance-st" ).val( $( "#slider-range-performance" ).slider( "values", 0 ).toFixed(2) );
-					$( "#amount-performance-en" ).val( $( "#slider-range-performance" ).slider( "values", 1 ).toFixed(2) );
-				} );
-			</script>
-
 			<div id="control" class="col-12">
 				<div id="option1" style="display: block">
 					<p>
@@ -121,8 +88,8 @@
 		<div>
 			<p>
 				<strong>Градирня</strong>
-				<input type="checkbox" name="heat_recovery" id="heat_recovery">
-				<label for="heat_recovery">Да</label>
+				<input type="checkbox" name="heat_recovery" id="heat_recovery" value="Да">
+				<label for="heat_recovery">Дa</label>
 			</p>
 			<p>
 				<strong>Звуковая изоляция</strong>
@@ -166,7 +133,8 @@
 	<div id="msg"></div>
 
 
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript" src="slider-range.js"></script>
 	<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
